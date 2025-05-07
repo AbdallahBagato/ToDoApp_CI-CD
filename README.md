@@ -38,3 +38,17 @@ todo-app/
 ├── src/
 │   └── index.js (or your main file)
 ```
+
+### How To Build The Image & Run The Image 
+```
+docker build -t yourusername/todo-app .
+docker run -d -p 3000:3000 --name my-todo yourusername/todo-app
+```
+### How To Push The Image To dockerHUB 
+```
+docker login
+docker tag todo-app yourusername/todo-app
+docker push yourusername/todo-app
+
+```
+
