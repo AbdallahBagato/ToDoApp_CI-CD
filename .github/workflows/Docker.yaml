@@ -29,12 +29,12 @@ jobs:
       with:
         context: .
         push: false
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/ToDoApp:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/todoapp:latest
 
     - name: Test Image Before Use It 
       id: test_container
       run: | 
-        docker run -d -p 3000:3000 --name ToDoApp ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
+        docker run -d -p 3000:3000 --name ToDoApp ${{ secrets.DOCKERHUB_USERNAME }}/todoapp:latest
         docker container inspect ToDoApp | grep -i ipaddress
 
     - name: Push Image (Only if container passed test)
@@ -42,7 +42,7 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/ToDoApp:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/todoapp:latest
 
     - uses: actions/upload-artifact@v4
       with:
