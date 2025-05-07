@@ -8,7 +8,7 @@ on:
         - main
 jobs:
   Build_The_Image:
-    runs-on: ubuntu:latest 
+    runs-on: ubuntu-latest 
 
     steps:
     - name: checkout The Code
