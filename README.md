@@ -1,5 +1,25 @@
-# Getting started
+# 🐳 To-Do App with Docker
 
-This repository is a sample application for users following the getting started guide at https://docs.docker.com/get-started/.
+This guide shows how to install Docker and build a To-Do app using a Dockerfile.
 
-The application is based on the application from the getting started tutorial at https://github.com/docker/getting-started
+---
+
+## 📦 Prerequisites
+
+- OS: Linux, macOS, or Windows
+- Admin privileges
+
+---
+
+## 🔧 Step 1: Install Docker
+
+### 📥 For Linux (Debian/Ubuntu)
+
+```bash
+sudo apt update
+sudo apt install -y docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+newgrp docker
+docker --version
