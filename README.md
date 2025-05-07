@@ -23,8 +23,10 @@ sudo systemctl enable docker
 sudo usermod -aG docker $USER
 newgrp docker
 docker --version
+```
 
 ### File Structure 
+```
 todo-app/
 ├── Dockerfile
 ├── .dockerignore
@@ -35,4 +37,4 @@ todo-app/
 │   └── (test files, if any)
 ├── src/
 │   └── index.js (or your main file)
-
+```
