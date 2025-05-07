@@ -23,3 +23,16 @@ sudo systemctl enable docker
 sudo usermod -aG docker $USER
 newgrp docker
 docker --version
+
+### File Structure 
+todo-app/
+├── Dockerfile
+├── .dockerignore
+├── README.md
+├── package.json
+├── yarn.lock
+├── spec/
+│   └── (test files, if any)
+├── src/
+│   └── index.js (or your main file)
+
