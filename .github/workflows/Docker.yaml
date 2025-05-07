@@ -7,7 +7,7 @@ on:
       branches:
         - main
 jobs:
-  Build The Image:
+  Build_The_Image:
     runs-on: ubuntu:latest
 
     steps:
